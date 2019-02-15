@@ -39,8 +39,15 @@ class LoginConfirmViewController: UIViewController {
         let vc = storyboard.instantiateInitialViewController()!
         present(vc, animated: true, completion: nil)
     }
+    
+    private func goToTable(){
+        let storyboard = UIStoryboard(name: "Table", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Table")
+        present(vc, animated: true, completion: nil)
+    }
 
     @IBAction func goButtonTapped(_ sender: Any) {
-        goToCamera()
+        //goToCamera()
+        goToTable()
     }
 }

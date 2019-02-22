@@ -20,7 +20,9 @@
 		28C322FB20D3D83C0045E02A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C322FA20D3D83C0045E02A /* Login.storyboard */; };
 		28C322FD20D3D8500045E02A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C322FC20D3D8500045E02A /* LoginViewController.swift */; };
 		DA77A6D62EE0FBE7488DBD51 /* Pods_SnapClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BCB97D81307E8889F84D4C /* Pods_SnapClient.framework */; };
-		E56C2EBB2216696900DE192A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C2EBA2216696900DE192A /* ViewController.swift */; };
+		E5438B59221F63B90040AAA3 /* Clock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5438B58221F63B90040AAA3 /* Clock.storyboard */; };
+		E5438B5B221F64A80040AAA3 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5438B5A221F64A80040AAA3 /* ClockViewController.swift */; };
+		E56C2EBB2216696900DE192A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C2EBA2216696900DE192A /* TableViewController.swift */; };
 		E56C2EBD22166AF900DE192A /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C2EBC22166AF900DE192A /* Table.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +61,9 @@
 		51AFDAB6523B8AD33090ECDE /* Pods-SnapClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient.release.xcconfig"; sourceTree = "<group>"; };
 		56BCB97D81307E8889F84D4C /* Pods_SnapClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB3FF3CCFBB419945DE0598 /* Pods-SnapClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClient/Pods-SnapClient.debug.xcconfig"; sourceTree = "<group>"; };
-		E56C2EBA2216696900DE192A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5438B58221F63B90040AAA3 /* Clock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clock.storyboard; sourceTree = "<group>"; };
+		E5438B5A221F64A80040AAA3 /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		E56C2EBA2216696900DE192A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E56C2EBC22166AF900DE192A /* Table.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,10 +87,12 @@
 				2842FB3A20E89B4E00D34863 /* LoginConfirm.storyboard */,
 				28C322D620D3D6000045E02A /* Main.storyboard */,
 				E56C2EBC22166AF900DE192A /* Table.storyboard */,
+				E5438B58221F63B90040AAA3 /* Clock.storyboard */,
 				28C322FC20D3D8500045E02A /* LoginViewController.swift */,
 				2842FB3C20E89B7700D34863 /* LoginConfirmViewController.swift */,
 				28C322D420D3D6000045E02A /* CameraViewController.swift */,
-				E56C2EBA2216696900DE192A /* ViewController.swift */,
+				E56C2EBA2216696900DE192A /* TableViewController.swift */,
+				E5438B5A221F64A80040AAA3 /* ClockViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 				E56C2EBD22166AF900DE192A /* Table.storyboard in Resources */,
 				28C322D320D3D6000045E02A /* art.scnassets in Resources */,
 				2842FB3B20E89B4E00D34863 /* LoginConfirm.storyboard in Resources */,
+				E5438B59221F63B90040AAA3 /* Clock.storyboard in Resources */,
 				28C322DD20D3D6020045E02A /* LaunchScreen.storyboard in Resources */,
 				28C322DA20D3D6020045E02A /* Assets.xcassets in Resources */,
 				28C322FB20D3D83C0045E02A /* Login.storyboard in Resources */,
@@ -295,9 +302,10 @@
 				287526F320F3450800601FE0 /* UIImage+Extension.swift in Sources */,
 				28C322FD20D3D8500045E02A /* LoginViewController.swift in Sources */,
 				28C322D520D3D6000045E02A /* CameraViewController.swift in Sources */,
-				E56C2EBB2216696900DE192A /* ViewController.swift in Sources */,
+				E56C2EBB2216696900DE192A /* TableViewController.swift in Sources */,
 				28C322D120D3D6000045E02A /* AppDelegate.swift in Sources */,
 				2842FB3920E895EE00D34863 /* UserEntity.swift in Sources */,
+				E5438B5B221F64A80040AAA3 /* ClockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +450,7 @@
 			baseConfigurationReference = ADB3FF3CCFBB419945DE0598 /* Pods-SnapClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N5P85SZQ4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -455,6 +464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liangzey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -465,6 +475,7 @@
 			baseConfigurationReference = 51AFDAB6523B8AD33090ECDE /* Pods-SnapClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N5P85SZQ4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -478,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = liangzey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

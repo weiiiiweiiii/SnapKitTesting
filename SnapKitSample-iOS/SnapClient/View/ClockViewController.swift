@@ -81,14 +81,13 @@ class ClockViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         total_min = hr*60+min
         print("Hour:\(hr), Min:\(min), Total Min:\(total_min)")
         
-        /*
         // Use SnapChat's Camera
         let snap = SCSDKNoSnapContent()
         
         // Sticker
         // Server on AWS provides Sticker
         // Chang with different Image
-        let url = URL(string: "http://54.215.189.97:8080/animations/clock.html?m=\(total_min)")
+        let url = URL(string: "http://54.215.189.97:5000/clock?m=\(total_min)")
         
         let sticker = SCSDKSnapSticker(stickerUrl: url!, isAnimated: true)
         
@@ -107,13 +106,13 @@ class ClockViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         snap.attachmentUrl = url?.absoluteString
         
         let api = SCSDKSnapAPI(content: snap)
-        api.startSnapping { error in
+        api.startSnapping {error in
             
         if let error = error {
                 print(error.localizedDescription)
         } else {
                 // success
+            }
         }
-        */
     }
 }

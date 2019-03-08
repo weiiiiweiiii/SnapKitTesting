@@ -36,6 +36,7 @@ class ClockViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Do any additional setup after loading the view.
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel: UILabel? = (view as? UILabel)
         if pickerLabel == nil {
@@ -77,7 +78,14 @@ class ClockViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
     }
     
+    // Down mean when the button is pressed but not released
+    @IBAction func confirmButtonDown(_ sender: Any) {
+        self.showSpinner(onView: self.view)
+    }
+    
+    // Tapped means down and up
     @IBAction func confirmButtonTapped(_ sender: Any) {
+        
         total_min = hr*60+min
         print("Hour:\(hr), Min:\(min), Total Min:\(total_min)")
         
@@ -106,13 +114,40 @@ class ClockViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         snap.attachmentUrl = url?.absoluteString
         
         let api = SCSDKSnapAPI(content: snap)
+        
         api.startSnapping {error in
             
         if let error = error {
                 print(error.localizedDescription)
         } else {
-                // success
+                self.removeSpinner()
             }
+        }
+    }
+}
+
+var vSpinner : UIView?
+
+extension UIViewController {
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
         }
     }
 }

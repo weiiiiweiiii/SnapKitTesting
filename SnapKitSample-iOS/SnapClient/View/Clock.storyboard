@@ -42,6 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="    Confirm"/>
                                 <connections>
+                                    <action selector="confirmButtonDown:" destination="dYw-Dz-80F" eventType="touchDown" id="jVK-D1-aoQ"/>
                                     <action selector="confirmButtonTapped:" destination="dYw-Dz-80F" eventType="touchUpInside" id="UBs-J8-32w"/>
                                 </connections>
                             </button>
